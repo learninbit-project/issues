@@ -1,0 +1,61 @@
+name: "Bug Reporting Form"
+description: "Help Us Help You! (By reporting those pesky bugs.)"
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Hello there! We're on a mission to enhance our platform, and your help is crucial. Please take a moment to provide us with detailed information about any bugs you encounter. Together, we can ensure a smoother experience for everyone.
+        Please report security issues by sending a mail to security@learninbit.com
+        Please take a look at the existing issues just in case something similar has already been reported.
+  - type: dropdown
+    id: bug-type
+    attributes:
+      label: What kind of bug is this?
+      options:
+        - Functional
+        - UI
+        - Performance
+        - Usability
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: component
+    attributes:
+      label: Which component is affected?
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: What should have happened?
+    validations:
+      required: true
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: What is actually happening?
+    validations:
+      required: true
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: What action triggered it?
+      description: Please provide steps to reproduce if applicable
+  - type: input
+    id: impact-level
+    attributes:
+      label: Level of Impact
+      description: Give it an impact rating on a scale of 1 - 10.
+  - type: input
+    id: occurrence-date
+    attributes:
+      label: Since when has this been occurring?
+      description: Around when did you start seeing this issue?
+  - type: textarea
+    id: environment
+    attributes:
+      label: What is the environment in which it happened?
+      description: Please mention any information that could help us (Browser, device, screen size, etc.)
